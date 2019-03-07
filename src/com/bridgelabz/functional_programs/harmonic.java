@@ -3,7 +3,7 @@ package com.bridgelabz.functional_programs;
 
 import com.bridgelabz.util.Functionalprogram;
 
-public class harmonic {
+public class Harmonic {
 
 	public static void main(String[] args) {
 	//	Scanner sc1=new Scanner(System.in);

@@ -4,6 +4,10 @@ package com.bridgelabz.util;
 
 import java.util.Scanner;
 
+/**
+ * @author Mahanidhi
+ *
+ */
 public class Functionalprogram {
 
 	private static Scanner scan=new Scanner (System.in);
@@ -19,7 +23,10 @@ public class Functionalprogram {
 		return scan.next();
 		
 	}
-	//1.Replacing the String;
+	
+	/**1.Replacing the String;
+	 * @param c
+	 */
 	public static void replace(String c) {
 		
 //		Scanner scan=new Scanner (System.in);
@@ -40,8 +47,10 @@ public class Functionalprogram {
 		
 	}
 	
-	//2. Tossing Coin;
 	
+	/**2. Tossing Coin;
+	 * @param flips
+	 */
 	public static void coins(int flips)
 	{
 		int count=1;
@@ -72,8 +81,11 @@ public class Functionalprogram {
 		int tailpercent=tails*100/flips;
 		System.out.println("tail percentage="+tailpercent);
 	}
-	//3.prime Factors;
 	
+	/**3.prime Factors;
+	 * @param n
+	 * @return
+	 */
 	public static int primeFactors(int n) {
 		for(int i=2;i>1;i++)
 		{
@@ -85,8 +97,10 @@ public class Functionalprogram {
 		}
 		return n;
 	}
-	//4.Harmonic;
 	
+	/**4.Harmonic;
+	 * @param n
+	 */
 	public static void demo(int n)
 	{
 		float a=1;
@@ -97,8 +111,11 @@ public class Functionalprogram {
 		System.out.println(a);
 	}
 	
-	//5. Leap Year
 	
+	/**5. Leap Year
+	 * @param year
+	 * @return
+	 */
 	public static int leap (int year)	
 	{
 		if(((year%4==0)&&(year%100!=0))||(year%400==0))
@@ -111,8 +128,10 @@ public class Functionalprogram {
 		return year;
     }
 	
-	//6. Power of 2
 	
+	/**6. Power of 2
+	 * @param n
+	 */
 	public static void  pow(int n)
 	{
 	int i=0;
@@ -129,9 +148,12 @@ public class Functionalprogram {
 	}
 	}
 	
-	// 7.Coupon
 	
 	
+	/**7.Coupon
+	 * @param n
+	 * @return
+	 */
 	public static int coupon(int n) {
 		boolean[] isCollected = new boolean[n];
 
@@ -151,8 +173,13 @@ public class Functionalprogram {
 		return count;
 		}
 	
-	//8.Gambler
+	
 
+	/**8.Gambler
+	 * @param stake
+	 * @param goal
+	 * @param trial
+	 */
 	public static void gambler(int stake, int goal, int trial) {
 		int wins = 0;
 		int loss = 0;
@@ -175,7 +202,12 @@ public class Functionalprogram {
 	}
 
 	
-	//Array2D
+	
+	/**Array2D
+	 * @param r
+	 * @param c
+	 * @param arr
+	 */
 	public static void array2D(int r,int c,int arr[][])
 	{
 		for(int i=0;i<r;i++)
@@ -186,9 +218,94 @@ public class Functionalprogram {
 			}
 			System.out.println( );
 		}
+		
+		
 	}
+		
+			// Prints all triplets in arr[] with 0 sum 
+		/**Sum of three digits
+		 * @param n
+		 * @param arr
+		 */
+		public static void findTriplets(int n,int arr[]) 
+			{ 
+			  
+			    for (int i=0; i<n-2; i++) 
+			    { 
+			        for (int j=i+1; j<n-1; j++) 
+			        { 
+			            for (int k=j+1; k<n; k++) 
+			            { 
+			                if (arr[i] + arr[j]+arr[k] == 0) 
+			                { 
+			                    System.out.print(arr[i]); 
+			                    System.out.print(" "); 
+			                    System.out.print(arr[j]); 
+			                    System.out.print(" "); 
+			                    System.out.print(arr[k]); 
+			                    System.out.print("\n"); 
+			            
+			                } 
+			                else {
+			                	 System.out.println(" not exist "); 
+			                }
+			            } 
+			        } 
+			    } 
+			    
+		
+			       
+			    
+			  
+			} 
+		
+		
+		
+/** Quadratic Equation
+ * @param a
+ * @param b
+ * @param c
+ */
 
-} 
+public static void roots(int a, int b, int c) {
+	int quad=(b*b)-(4*a*c);
+	if(quad>0)
+	{
+		double root1=(-b+Math.sqrt(quad))/(2*a);
+		double root2=(-b-Math.sqrt(quad))/(2*a);
+		System.out.println("Roots are distinct"+" "+"root=" +root1+ "root2=" +root2);
+	}
+		else if (quad==0) {
+			double root3=(-b)/(2*a);
+			double root4 = root3;
+			System.out.println("Roots are eual"+ " "+"root="+root3);
+		}
+			else if(quad<0) {
+				double real=(-b)/(2*a);
+				double imagi=Math.sqrt(-quad)/(2*a);
+				System.out.println("Roots are real and imaginary");
+				System.out.println(real + "+i"+imagi);
+				System.out.println(real + "-i"+imagi);
+
+			}
+			
+	
+}
+
+
+
+
+}
+
+	
+
+
+		
+	
+	
+
+
+ 
 
 	
 	

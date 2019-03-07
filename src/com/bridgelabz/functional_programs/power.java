@@ -3,7 +3,7 @@ package com.bridgelabz.functional_programs;
 
 import com.bridgelabz.util.Functionalprogram;
 
-public class power {
+public class Power {
 
 	public static void main(String[] args) {
 //		Scanner sc1=new Scanner(System.in);

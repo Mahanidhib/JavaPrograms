@@ -3,7 +3,7 @@ package com.bridgelabz.functional_programs;
 
 import com.bridgelabz.util.Functionalprogram;
 
-public class leap_year {
+public class LeapYear {
 
 	public static void main(String[] args) {
 		//Scanner s=new Scanner(System.in);

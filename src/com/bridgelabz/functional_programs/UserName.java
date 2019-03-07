@@ -5,7 +5,7 @@ import com.bridgelabz.util.Functionalprogram;
 
 
 
-public class User_name {
+public class UserName {
 	
 
 	
