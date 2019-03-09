@@ -9,16 +9,11 @@ public class Array2D {
 				int r=Functionalprogram.intModel();
 				System.out.println("columns");
 				int c=Functionalprogram.intModel();
-				int arr[][]=new int[r][c];
-				for(int i=0; i<r;i++)
-				{
-					for(int j=0;j<c;j++)
-					{
-						System.out.println("enter the values");
-						arr[i][j]=Functionalprogram.intModel();
-					}
-				}
-Functionalprogram.array2D(r,c,arr);
+				Object arr[][]=new Object[r][c];
+			/*	
+			*/	
+Functionalprogram.array2D (r,c,arr);
 	}
-
 }
+
+

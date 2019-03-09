@@ -23,6 +23,10 @@ public class Functionalprogram {
 		return scan.next();
 		
 	}
+	public static double doubleModel()
+	{
+		return scan.nextDouble();
+	}
 	
 	/**1.Replacing the String;
 	 * @param c
@@ -203,27 +207,36 @@ public class Functionalprogram {
 
 	
 	
-	/**Array2D
+	/**9.Array2D
 	 * @param r
 	 * @param c
 	 * @param arr
 	 */
-	public static void array2D(int r,int c,int arr[][])
+	public static void array2D(int r,int c,Object arr[][])
 	{
+		System.out.println("enter the values");
+		for(int i=0; i<r;i++)
+		{
+			for(int j=0;j<c;j++)
+			{
+				
+				arr[i][j]=Functionalprogram.stringModel();
+			}
+		}
 		for(int i=0;i<r;i++)
 		{
 			for(int j=0;j<c;j++)
 			{
-				System.out.print(+arr[i][j]+" ");
+				System.out.print(arr[i][j]+ " ");
 			}
 			System.out.println( );
 		}
+		}
 		
-		
-	}
+	
 		
 			// Prints all triplets in arr[] with 0 sum 
-		/**Sum of three digits
+		/**10.Sum of three digits
 		 * @param n
 		 * @param arr
 		 */
@@ -261,7 +274,7 @@ public class Functionalprogram {
 		
 		
 		
-/** Quadratic Equation
+/**11. Quadratic Equation
  * @param a
  * @param b
  * @param c
@@ -293,8 +306,40 @@ public static void roots(int a, int b, int c) {
 }
 
 
+/**12.Distance
+ * @param x
+ * @param y
+ */
+public static void origin(int x,int y)
+{
+	double a=Math.sqrt((x*x)+(y*y));
+			System.out.println(a);
+}
 
 
+
+/**13.Stop Watch
+ * @param l
+ * @param s
+ */
+public static void watch(long l,long s)
+{
+	long elapsTime=s-l;
+	System.out.println("Clock time in millisecond="+elapsTime);
+}
+
+
+/**14.Wind Chill
+ * @param t
+ * @param v
+ */
+public static double wind(double t, double v)
+
+{
+	double w=35.74+0.6215*t + (0.4275*t - 35.74)*Math.pow(v,0.16);
+	return w;
+	
+}
 }
 
 	
