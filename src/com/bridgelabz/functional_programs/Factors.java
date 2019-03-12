@@ -10,7 +10,7 @@ public class Factors {
 				System.out.println("enter the value of n");
 		int n=Functionalprogram.intModel();
 		Functionalprogram.primeFactors(n);
-		// TODO Auto-generated method stub
+		
 
 	}
 	
