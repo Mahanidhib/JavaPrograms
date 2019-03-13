@@ -8,7 +8,7 @@ public class TicTac
 	 static final int NONE = 0;
    static final int USER = 1;
    static final int COMPUTER = 2;
-   //static final int STALEMATE=3;
+   static final int STALEMATE=3;
    public static void main(String[] args) {
    	// Data objects
 	// 1 = user, 2 = computer
