@@ -322,10 +322,10 @@ public static void origin(int x,int y)
  * @param l
  * @param s
  */
-public static void watch(long l,long s)
+public static long watch(long l,long s)
 {
 	long elapsTime=s-l;
-	System.out.println("Clock time in millisecond="+elapsTime);
+	return elapsTime;
 }
 
 
