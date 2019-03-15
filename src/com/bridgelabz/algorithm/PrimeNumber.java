@@ -2,6 +2,7 @@ package com.bridgelabz.algorithm;
 
 import com.bridgelabz.util.AlgorithmProgram;
 //import com.bridgelabz.util.Functionalprogram;
+import com.bridgelabz.util.Functionalprogram;
 
 public class PrimeNumber {
 
@@ -10,12 +11,12 @@ public class PrimeNumber {
 
 		       
 		        
-		         System.out.println ("Prime numbers between 0 to 1000 are :"); 
-		      //   int n= Functionalprogram.intModel();
-		    //     System.out.println ("Enter the upper limit :"); 
-		       //  int m= Functionalprogram.intModel();
-		         AlgorithmProgram.prime();
-		        // System.out.println (n,m);
+		         System.out.println ("Enter the lower limit :"); 
+		        int n= Functionalprogram.intModel();
+		         System.out.println ("Enter the upper limit :"); 
+		         int m= Functionalprogram.intModel();
+		         AlgorithmProgram.prime(n,m);
+		   //      System.out.println (n,m);
 		        
 		       
 }

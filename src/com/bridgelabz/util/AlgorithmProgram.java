@@ -33,9 +33,9 @@ public class AlgorithmProgram {
 		if (n1!= n2)
 			return false;
 		
-		
-		Arrays.sort(str1);
-		Arrays.sort(str2);
+//		
+//		Arrays.sort(str1);
+//		Arrays.sort(str2);
 
 		for(int i=0;i<n1;i++)
 			if(str1[i]!=str2[i])
@@ -49,11 +49,11 @@ public class AlgorithmProgram {
 	 * @param s1
 	 * @param s2
 	 */
-	public static void prime()
+	public static void prime(int num1,int num2)
 	{
 		
 	
-	  for(int i = 0; i < 1000; i++)
+	  for(int i = num1; i < num2; i++)
       {
 		  int flag=0;
           for(int  j = 1; j <=i; j++)
@@ -76,7 +76,7 @@ public class AlgorithmProgram {
 	/**Bubble sort
 	 * @param a
 	 */
-	public static void bSort(int a[])
+	public static void bubbleSort(int a[])
 	{
 		
 		for(int i=0;i<a.length-1;i++)
@@ -91,8 +91,8 @@ public class AlgorithmProgram {
 				}
 			}
 		}
-		for(int e:a) {
-			System.out.println(e+ " ");
+		for(int array:a) {
+			System.out.println(array+ " ");
 				}
 			
 		}
@@ -152,7 +152,61 @@ public class AlgorithmProgram {
 				System.out.println( array[kl]+" ");
 			
 		}
+		
+		
+		
+		
+		  /**Merge Sort Strings
+		 * @param names
+		 */
+		public static void mergeSort(String[] names) {
+		        if (names.length >= 2) {
+		            String[] left = new String[names.length / 2];
+		            String[] right = new String[names.length - names.length / 2];
 
+		            for (int i = 0; i < left.length; i++) {
+		                left[i] = names[i];
+		            }
+
+		            for (int i = 0; i < right.length; i++) {
+		                right[i] = names[i + names.length / 2];
+		            }
+
+		            mergeSort(left);
+		            mergeSort(right);
+		            merge(names, left, right);
+		        }
+		    }
+
+		    public static void merge(String[] names, String[] left, String[] right) {
+		        int a = 0;
+		        int b = 0;
+		        for (int i = 0; i < names.length; i++) {
+		            if (b >= right.length || (a < left.length && left[a].compareToIgnoreCase(right[b]) < 0)) {
+		                names[i] = left[a];
+		                a++;
+		            } else {
+		                names[i] = right[b];
+		                b++;
+		            }
+		        }
+		    }
+
+		    
+			/**Monthly Payment
+			 * @param p
+			 * @param y
+			 * @param r
+			 * @return
+			 */
+			public static double monthPayment(double p, double y, double r)
+			{
+				double n = 12 * y;
+				double r0 = r / (12 * 100);
+				double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
+				return payment;
+			}
+		
 	}
 	
 

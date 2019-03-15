@@ -20,7 +20,7 @@ public class Functionalprogram {
 	
 	public static String stringModel()
 	{
-		return scan.next();
+		return scan.nextLine();
 		
 	}
 	public static double doubleModel()
