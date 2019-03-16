@@ -8,7 +8,7 @@ public class LeapYear {
 	public static void main(String[] args) {
 		//Scanner s=new Scanner(System.in);
 		System.out.println("enter the year");
-		int year=Functionalprogram.intModel();
+		int year=Functionalprogram.getInputInteger();
 		if(year>999)
 		{ 
 			Functionalprogram.leap(year);

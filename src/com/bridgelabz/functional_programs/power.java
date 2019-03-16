@@ -8,7 +8,7 @@ public class Power {
 	public static void main(String[] args) {
 //		Scanner sc1=new Scanner(System.in);
 		System.out.println("enter the value of n");;
-		int n=Functionalprogram.intModel();
+		int n=Functionalprogram.getInputInteger();
 		Functionalprogram.pow(n);
 	}
 		

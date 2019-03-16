@@ -8,7 +8,7 @@ public class Factors {
 	public static void main(String[] args) {
 //		Scanner scan=new Scanner(System.in);
 				System.out.println("enter the value of n");
-		int n=Functionalprogram.intModel();
+		int n=Functionalprogram.getInputInteger();
 		Functionalprogram.primeFactors(n);
 		
 

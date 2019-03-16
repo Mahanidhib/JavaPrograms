@@ -1,6 +1,6 @@
 package com.bridgelabz.util;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class AlgorithmProgram {
 	
@@ -9,12 +9,12 @@ public class AlgorithmProgram {
 	 */
 	public static int[] arr()
 	{
-		int n=Functionalprogram.intModel();
+		int n=Functionalprogram.getInputInteger();
 		int[] arr =new int[n];
 		
 		for(int i=0;i<n;i++)
 		{
-			arr[i]=Functionalprogram.intModel();
+			arr[i]=Functionalprogram.getInputInteger();
 		}
 	
 
@@ -25,10 +25,10 @@ public class AlgorithmProgram {
 	 * @param str2
 	 * @return
 	 */
-	public static boolean areAnagram(char[] str1,char[] str2)
+	public static boolean anagram(char[] string1,char[] string2)
 	{
-		int n1=str1.length;
-		int n2=str2.length;
+		int n1=string1.length;
+		int n2=string2.length;
 		
 		if (n1!= n2)
 			return false;
@@ -38,7 +38,7 @@ public class AlgorithmProgram {
 //		Arrays.sort(str2);
 
 		for(int i=0;i<n1;i++)
-			if(str1[i]!=str2[i])
+			if(string1[i]!=string2[i])
               return false;
 		
 		
@@ -49,11 +49,11 @@ public class AlgorithmProgram {
 	 * @param s1
 	 * @param s2
 	 */
-	public static void prime(int num1,int num2)
+	public static void prime(int number1,int number2)
 	{
 		
 	
-	  for(int i = num1; i < num2; i++)
+	  for(int i = number1; i < number2; i++)
       {
 		  int flag=0;
           for(int  j = 1; j <=i; j++)
@@ -76,23 +76,23 @@ public class AlgorithmProgram {
 	/**Bubble sort
 	 * @param a
 	 */
-	public static void bubbleSort(int a[])
+	public static void bubbleSort(int array[])
 	{
 		
-		for(int i=0;i<a.length-1;i++)
+		for(int i=0;i<array.length-1;i++)
 		{
-			for(int j=0;j<a.length-1;j++)
+			for(int j=0;j<array.length-1;j++)
 			{
-				if(a[j]>a[j+1])
+				if(array[j]>array[j+1])
 				{
-					int t=a[j];
-					a[j]=a[j+1];
-					a[j+1]=t;
+					int t=array[j];
+					array[j]=array[j+1];
+					array[j+1]=t;
 				}
 			}
 		}
-		for(int array:a) {
-			System.out.println(array+ " ");
+		for(int arr:array) {
+			System.out.println(arr+ " ");
 				}
 			
 		}
@@ -206,7 +206,59 @@ public class AlgorithmProgram {
 				double payment = p * r0 / (1 - Math.pow((1 + r0), -n));
 				return payment;
 			}
+
+			
+			
+		/**converting to fahrenheit
+		 * @param celsius
+		 * @return
+		 */
+		public static float faharenheit(float celsius)	{
+			float fahrenheit=9*(celsius /5)+32;
+			return fahrenheit;
+			
+		}
+		
+		/**Converting to celsius
+		 * @param fahrenheit
+		 * @return
+		 */
+		public static float celsius(float fahrenheit)
+		{
+			float celsius=(fahrenheit-32)*5/9;
+			return celsius;
+		}
+		
+		
+		
+		
+		/**Vending Machine
+		 * @param change
+		 * @param money
+		 */
+		public static void machine(int[] change,int money)
+		{
+		for(int i=change.length-1;i>=0;i--)
+		{
+		    int count=0;
+		    if(money==0)
+		        return;
+		    else
+		        {
+		        if(money>=change[i])
+		    {
+		        count=money/change[i];
+		        System.out.println(change[i]+" notes:"+count);
+		        money=money-(count*change[i]);
+		    }
+		}
+
+		}
+
 		
 	}
+}
+
+
 	
 

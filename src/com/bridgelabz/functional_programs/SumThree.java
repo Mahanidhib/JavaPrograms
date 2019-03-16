@@ -7,14 +7,14 @@ public class SumThree {
 	{ 
 		
 		 System.out.println("enter the value");
-		    int n =Functionalprogram.intModel();
+		    int n =Functionalprogram.getInputInteger();
 	    int arr[] =new int[n];
 	   
 	  
 	    for(int i=0;i<n;i++)
 	    {
 	    	System.out.println("values");
-	    	arr[i]=Functionalprogram.intModel();
+	    	arr[i]=Functionalprogram.getInputInteger();
 	    }
 	    Functionalprogram.findTriplets(n, arr);
 	  

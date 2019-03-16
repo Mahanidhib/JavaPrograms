@@ -6,9 +6,9 @@ public class Distance {
 
 	public static void main(String[] args) {
 		System.out.println("Enter the starting point");
-		int x=Functionalprogram.intModel();
+		int x=Functionalprogram.getInputInteger();
 		System.out.println("Enter the end point");
-		int y=Functionalprogram.intModel();
+		int y=Functionalprogram.getInputInteger();
 		Functionalprogram.origin(x,y);
 
 	}

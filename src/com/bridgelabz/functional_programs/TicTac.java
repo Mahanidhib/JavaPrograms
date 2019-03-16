@@ -40,7 +40,7 @@ public class TicTac
 		while (move<0 || move>9 || board[move/3][move%3] != EMPTY) {
 		    
 		   System.out.println("Please enter your move(0-9): ");
-		   move=Functionalprogram.intModel();
+		   move=Functionalprogram.getInputInteger();
 		    //move = system.in.readInt();
 		   // Console.in.readChar();
 		}

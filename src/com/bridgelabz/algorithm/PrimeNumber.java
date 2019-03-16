@@ -12,13 +12,13 @@ public class PrimeNumber {
 		       
 		        
 		         System.out.println ("Enter the lower limit :"); 
-		        int n= Functionalprogram.intModel();
+		        int n= Functionalprogram.getInputInteger();
 		         System.out.println ("Enter the upper limit :"); 
-		         int m= Functionalprogram.intModel();
+		         int m= Functionalprogram.getInputInteger();
 		         AlgorithmProgram.prime(n,m);
 		   //      System.out.println (n,m);
 		        
 		       
-}
+	}
 	
 }

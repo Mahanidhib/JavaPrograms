@@ -8,17 +8,18 @@ public class MergeSort {
 	    public static void main(String[] args) {
 
 	    	System.out.println("Enter the no. of Strings: ");
-	    	int s=Functionalprogram.intModel();
+	    	int s=Functionalprogram.getInputInteger();
 	    	String[] arr=new String[s];
 	    	
 	    		for(int i=0;i<s;i++)
 	    		{
-	    			arr[i]=Functionalprogram.stringModel();
+	    			arr[i]=Functionalprogram.getInputString();
 	    	   }
                  AlgorithmProgram.mergeSort(arr);
 
 	   
-        for (String n : arr) {
+        for (String n : arr)
+          {
 	            System.out.println(n);
 	        }
 	    }

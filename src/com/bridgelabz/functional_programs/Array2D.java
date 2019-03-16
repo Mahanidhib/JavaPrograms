@@ -6,14 +6,12 @@ public class Array2D {
 
 	public static void main(String[] args) {
 		System.out.println("rows");
-				int r=Functionalprogram.intModel();
-				System.out.println("columns");
-				int c=Functionalprogram.intModel();
-				Object arr[][]=new Object[r][c];
-			/*	
-			*/	
-Functionalprogram.array2D (r,c,arr);
+		int rows = Functionalprogram.getInputInteger();
+		System.out.println("columns");
+		int columns = Functionalprogram.getInputInteger();
+		Object arr[][] = new Object[rows][columns];
+		/*	
+		*/
+		Functionalprogram.array2D(rows, columns, arr);
 	}
 }
-
-

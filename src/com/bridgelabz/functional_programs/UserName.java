@@ -14,7 +14,7 @@ public class UserName {
 	public static void main(String[] args) {
 		//Scanner scan=new Scanner (System.in);
 		System.out.println("Enter the user name");
-		String c= Functionalprogram.stringModel();
+		String c= Functionalprogram.getInputString();
 		Functionalprogram.replace(c);
 	}
 	

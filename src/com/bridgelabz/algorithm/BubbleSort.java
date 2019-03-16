@@ -6,9 +6,9 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 		System.out.println("Enter the no. of elements");
-		int[] arr=AlgorithmProgram.arr();
+		int[] array=AlgorithmProgram.arr();
 		System.out.println("the sorted arrays are  ");
-		AlgorithmProgram.bubbleSort(arr);
+		AlgorithmProgram.bubbleSort(array);
 		
 
 	}
