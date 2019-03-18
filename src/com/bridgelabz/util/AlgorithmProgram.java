@@ -85,9 +85,9 @@ public class AlgorithmProgram {
 			{
 				if(array[j]>array[j+1])
 				{
-					int t=array[j];
+					int temp=array[j];
 					array[j]=array[j+1];
-					array[j+1]=t;
+					array[j+1]=temp;
 				}
 			}
 		}
@@ -257,6 +257,51 @@ public class AlgorithmProgram {
 
 		
 	}
+		
+		
+		/**Day of Week
+		 * @param year
+		 * @param month
+		 * @param date
+		 */
+		public static void week(int year, int month, int date) {
+			{
+				if((month>0 && month<13)&&(date>0 && date<30 ))
+				{
+				    int y0 = year - (14- month) / 12;
+					int x = y0 + y0/4 - y0/100 + y0/400;
+					int m0 = month + 12 * ((14 - month) / 12)- 2;
+					int	d0 = (date + x + 31 *m0 / 12)% 7;
+				
+					
+	switch(d0)
+	{
+	case 0:System.out.println("Sunday");
+	break;
+	case 1:System.out.println("Monday");
+	break;
+	case 2:System.out.println("Tuesday");
+	break;
+	case 3:System.out.println("Wednesday");
+	break;
+	case 4:System.out.println("Thursday");
+	break;
+	case 5:System.out.println("Friday");
+	break;
+	case 6:System.out.println("Saturday");
+	break;
+	}
+
+
+			}
+				else {
+					
+					
+					System.out.println("Invalid");
+				}
+
+}
+}
 }
 
 
