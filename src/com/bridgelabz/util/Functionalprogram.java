@@ -265,7 +265,7 @@ public class Functionalprogram {
 			System.out.println("Roots are distinct" + " " + "root=" + root1 + "root2=" + root2);
 		} else if (quad == 0) {
 			double root3 = (-b) / (2 * a);
-			double root4 = root3;
+			//double root4 = root3;
 			System.out.println("Roots are eual" + " " + "root=" + root3);
 		} else if (quad < 0) {
 			double real = (-b) / (2 * a);
