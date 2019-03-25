@@ -1,6 +1,9 @@
 package com.bridgelabz.util;
 
 import java.util.ArrayList;
+import java.util.List;
+
+
 
 //import java.util.Arrays;
 
@@ -77,19 +80,22 @@ public class AlgorithmProgram {
 	 * 
 	 * @param a
 	 */
-	public static void bubbleSort(int array[]) {
+	public static void bubble(List<Integer> nos, int n) {
+		int i, temp;
 
-		for (int i = 0; i < array.length - 1; i++) {
-			for (int j = 0; j < array.length - 1; j++) {
-				if (array[j] > array[j + 1]) {
-					int temp = array[j];
-					array[j] = array[j + 1];
-					array[j + 1] = temp;
+		for (i = 0; i < nos.size() - 1; i++) {
+			for (int j = 0; j < nos.size() - i - 1; j++) {
+
+				if (nos.get(j) > nos.get(j + 1)) {
+					temp = nos.get(j);
+					nos.set(j, nos.get(j + 1));
+					nos.set(j + 1, temp);
+
 				}
 			}
 		}
-		for (int arr : array) {
-			System.out.println(arr + " ");
+		for (int k:nos) {
+			System.out.println(k+ " ");
 		}
 
 	}
@@ -377,4 +383,115 @@ public class AlgorithmProgram {
 		return count;
 	}
 
+	
+	
+	// INSERTION SORT LIST
+			public static void insertString(java.util.List <String> array,int n) {
+
+				int i = 0, j = 0, w;
+				String temp;
+				for (i = 0; i < array.size(); i++) {
+					for (j = 0; j <= i; j++) {
+						if (array.get(j).compareTo(array.get(i))>0)
+						{
+							temp = array.get(j);
+							array.set(j, array.get(i));
+							for (w = i; w > j + 1; w--) {
+								array.set(w, array.get(w-1));}
+							array.set(w, temp);
+						}
+					}
+				}
+
+				for (String k:array)
+					System.out.print(k + " ");
+				System.out.println(" ");
+			}
+	
+			
+			/**Bubble sort for String
+			 * @param str
+			 */
+			public static void isBubbleString(String str) {
+				char[] array = str.toCharArray();
+				char temp;
+				int i, n = array.length;
+				for (i = 0; i < n - 1; i++) {
+					for (int j = 0; j < n - i - 1; j++) {
+						if (array[j] > array[j + 1]) {
+							temp = array[j];
+							array[j] = array[j + 1];
+							array[j + 1] = temp;
+						}
+					}
+				}
+				for (i = 0; i < n; i++) {
+					System.out.print(array[i] + " ");
+				}
+			}
+		
+			
+			// INSERTION SORT FOR INTEGERS
+			public static <T extends Comparable<T>> void insertionSort(T[] array) {
+				int i = 0, j = 0, w;
+				for (i = 0; i < array.length; i++) {
+					for (j = 0; j <= i; j++) {
+						if (array[j].compareTo(array[i])>0) {
+							T temp = array[j];
+							array[j] = array[i];
+							for (w = i; w > j + 1; w--)
+								array[w] = array[w - 1];
+							array[w] = temp;
+						}
+					}
+				}
+				for (T kl : array)
+					System.out.println(kl + " ");
+				System.out.println(" ");
+			}
+
+		//bubble sort
+			public static <T extends Comparable <T>> void BubbleSort(T[] array)
+			{
+				int i;
+				int n=array.length;
+				for (i = 0; i < n-1; i++) {
+					for (int j = 0; j < n - i - 1; j++) {
+						if (array[j].compareTo(array[j+1])>0) {
+							T temp = array[j];
+							array[j] = array[j + 1];
+							array[j + 1] = temp;
+						}
+					}
+				}
+				for (i = 0; i < n; i++) {
+					System.out.println(array[i] + " ");
+				}
+			}
+
+
+
+			// BINARY SEARCH 
+			public static <T extends Comparable<T>> void BinarySearch(T[] arr,T key) {
+
+				int low=0,high=arr.length-1,mid = 0;
+				mid = (low + high) / 2;
+				while (low <= high) {
+					if (key.compareTo(arr[mid])>0)
+						low = mid + 1;
+					else if (arr[mid].equals(key)) {
+						System.out.println("key element found at index " + mid);
+						break;
+					} else
+						high = mid - 1;
+
+				mid = (low + high) / 2;
+				}
+				if (low > high)
+				{
+					System.out.println("key element not found");
+				}
+			}
+
 }
+

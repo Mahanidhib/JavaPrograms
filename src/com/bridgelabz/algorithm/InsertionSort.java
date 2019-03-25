@@ -1,50 +1,31 @@
 package com.bridgelabz.algorithm;
 
-//import com.bridgelabz.util.AlgorithmProgram;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.bridgelabz.util.AlgorithmProgram;
+
 import com.bridgelabz.util.Functionalprogram;
 
 public class InsertionSort {
 	
+		public static void main(String[] args) {
+			System.out.println("Enter size: ");
+			int n =Functionalprogram.getInputInteger();
+			List<String>  words= new ArrayList<>();
+			System.out.println("Enter the words:");
+
+			for(int i=0;i<=n;i++){
+				words.add(Functionalprogram.getInputString());
+			}
+			AlgorithmProgram.insertString(words,n);
+			
+		}
+
+	}
+
 
 	
-		public static void main(String[] args) {
-		    System.out.println("Enter the value of N: ");
-	    	int N= Functionalprogram.getInputInteger();
-		    String[] arr= new String[N];
-		    System.out.println("Enter Strings : ");
-	    	 for (int i = 0; i < N; i++)
-		    	 {
-				arr[i] = Functionalprogram.getInputString( );
-		    	 }
-		        int n = arr.length; 
-	            sort_sub(arr, n); 
-		        System.out.println("Sorted array: "); 
-
-		String sortedArray[] = sort_sub(arr, arr.length); 
-		for(int i=0;i<sortedArray.length;i++)
-		{
-		System.out.println(sortedArray[i]);
-		}
-		}
-
-		public static String[] sort_sub(String array[], int n)
-		{
-			String temp="";
-		for(int i=0;i<n;i++)
-		{
-			for(int j=i+1;j<n;j++)
-			{
-				if(array[i].compareToIgnoreCase(array[j])>0)
-				{
-					temp=array[i];
-					array[i]=array[j];
-					array[j]=temp;
-				}
-			} 
-		  }
-		  return array;
-		}
-	}
 			
 
 	
