@@ -336,7 +336,7 @@ public class AlgorithmProgram {
 	}
 
 	public static void primeAnagrams() {
-		ArrayList<Integer> ar = new ArrayList<Integer>();
+		ArrayList<Integer> ar = new ArrayList<>();
 		System.out.println();
 		boolean b;
 		for (int j = 2; j <= 1000; j++) {
@@ -386,7 +386,7 @@ public class AlgorithmProgram {
 	
 	
 	// INSERTION SORT LIST
-			public static void insertString(java.util.List <String> array,int n) {
+			public static void insertString(List <String> array,int n) {
 
 				int i = 0, j = 0, w;
 				String temp;
@@ -431,7 +431,7 @@ public class AlgorithmProgram {
 			}
 		
 			
-			// INSERTION SORT FOR INTEGERS
+			// INSERTION SORT 
 			public static <T extends Comparable<T>> void insertionSort(T[] array) {
 				int i = 0, j = 0, w;
 				for (i = 0; i < array.length; i++) {

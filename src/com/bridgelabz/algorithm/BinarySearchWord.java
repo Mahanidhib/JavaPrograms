@@ -13,9 +13,11 @@ import com.bridgelabz.util.Functionalprogram;
 
 	public class BinarySearchWord {
 
-		@SuppressWarnings("resource")
+		
+	
 		public static void main(String[] args) throws Exception {
-			File file =new File("C:\\Users\\Mahanidhi\\Desktop");
+			File file =new File("E:\\New Text Document (2).txt");
+			@SuppressWarnings("resource")
 			BufferedReader bufferreader=new BufferedReader(new FileReader(file));
 			String[] string =new String[50];
 			String delimitor=" ";
@@ -40,4 +42,5 @@ import com.bridgelabz.util.Functionalprogram;
 		}
 
 	}
+	
 
