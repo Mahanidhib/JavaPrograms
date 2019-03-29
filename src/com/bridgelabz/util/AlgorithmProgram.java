@@ -435,12 +435,12 @@ public class AlgorithmProgram {
 			public static <T extends Comparable<T>> void insertionSort(T[] array) {
 				int i = 0, j = 0, w;
 				for (i = 0; i < array.length; i++) {
-					for (j = 0; j <= i; j++) {
+					for (j = 0; j < i; j++) {
 						if (array[j].compareTo(array[i])>0) {
 							T temp = array[j];
 							array[j] = array[i];
-							for (w = i; w > j + 1; w--)
-								array[w] = array[w - 1];
+							for (w = i; w > j + 1; w--) {
+								array[w] = array[w - 1];}
 							array[w] = temp;
 						}
 					}
