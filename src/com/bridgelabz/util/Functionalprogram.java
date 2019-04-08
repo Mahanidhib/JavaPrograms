@@ -21,7 +21,7 @@ public class Functionalprogram {
 
 	}
 
-	public static double doubleModel() {
+	public static double getInputDoubleModel() {
 		return scan.nextDouble();
 	}
 
@@ -119,14 +119,16 @@ public class Functionalprogram {
 	 * @param year
 	 * @return
 	 */
-	public static int leap(int year) {
+	public static boolean leap(int year) {
+		if(year>999)
 		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-			System.out.println("It is a leap year");
-		} else {
-			System.out.println("it is not a leap year");
-		}
-		return year;
+			return true;
+		} 
+			
+		
+		return false;
 	}
+	
 
 	/**
 	 * 6. Power of 2

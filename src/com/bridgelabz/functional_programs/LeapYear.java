@@ -9,17 +9,19 @@ public class LeapYear {
 		//Scanner s=new Scanner(System.in);
 		System.out.println("enter the year");
 		int year=Functionalprogram.getInputInteger();
-		if(year>999)
+		
 		{ 
-			Functionalprogram.leap(year);
-		}
+			
+			if(Functionalprogram.leap(year)) {
+				System.out.println("It is a leap year");		}
 		else
 		   {
-			System.out.println("enter the four digit number");
+			System.out.println("It is not a leap year");
 		
 		   }
 	}
 		
+	}
 }
 
 	

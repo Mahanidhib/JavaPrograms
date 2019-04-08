@@ -57,23 +57,32 @@ public class AlgorithmProgram {
 	 * @param s1
 	 * @param s2
 	 */
-	public static void prime(int number1, int number2) {
+	public static List<Integer> isPrime(int min, int max) {
+		int i, count, k = 0;
+		List<Integer> list = new ArrayList<Integer>();
+		while (min <= max) {
+			count = 0;
+			i = 2;
+			// Divisors always lies between 0 to (number/2)
+			while (i <= min / 2) {
+				if (min % i == 0) {
+					count++;
 
-		for (int i = number1; i < number2; i++) {
-			int flag = 0;
-			for (int j = 1; j <= i; j++) {
-				if (i % j == 0) {
-					flag = flag + 1;
-
+					break;
 				}
+				i++;
+			}
+			if (count == 0 && min != 1) {
+				list.add(min);
 
 			}
-			if (flag == 2) {
-				System.out.print(i + " ");
-			}
+			min++;
 		}
+		
+		return list;
 
 	}
+
 
 	/**
 	 * Bubble sort
@@ -206,44 +215,17 @@ public class AlgorithmProgram {
 	 * @param month
 	 * @param date
 	 */
-	public static void week(int year, int month, int date) {
-		{
-			if ((month > 0 && month < 13) && (date > 0 && date < 30)) {
+	public static int week(int year, int month, int date) {
+		
 				int y0 = year - (14 - month) / 12;
 				int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
 				int m0 = month + 12 * ((14 - month) / 12) - 2;
 				int d0 = (date + x + 31 * m0 / 12) % 7;
+				
 
-				switch (d0) {
-				case 0:
-					System.out.println("Sunday");
-					break;
-				case 1:
-					System.out.println("Monday");
-					break;
-				case 2:
-					System.out.println("Tuesday");
-					break;
-				case 3:
-					System.out.println("Wednesday");
-					break;
-				case 4:
-					System.out.println("Thursday");
-					break;
-				case 5:
-					System.out.println("Friday");
-					break;
-				case 6:
-					System.out.println("Saturday");
-					break;
-				}
+				return d0;
+			
 
-			} else {
-
-				System.out.println("Invalid");
-			}
-
-		}
 	}
 
 	// Function to convert decimal to binary//
