@@ -24,7 +24,7 @@ public class TestOrderedList {
 		}
 				bubbleSort(array);
 		for (String k : array) {
-			list.addElement(k);
+			list.add(k);
 			
 		}
 		

@@ -10,44 +10,46 @@ public class DataStructuresProgram {
 	 * @param ch
 	 * @return
 	 */
-	@SuppressWarnings("rawtypes")
+	static boolean isMatchingPair(char character1, char character2) {
+		if (character1 == '(' && character2 == ')')
+			return true;
+		else if (character1 == '{' && character2 == '}')
+			return true;
+		else if (character1 == '[' && character2 == ']')
+			return true;
+		else
+			return false;
+	}
+
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static boolean areParenthesisBalanced(char[] ch) {
 
-			StackImplementation st = new StackImplementation();
+		StackLinkedList st = new StackLinkedList();
 
-			for (int i = 0; i < ch.length; i++) {
-				if (ch[i] == '{' || ch[i] == '(' || ch[i] == '[')
-					st.push(ch[i]);
+		for (int i = 0; i < ch.length; i++) {
+			if (ch[i] == '{' || ch[i] == '(' || ch[i] == '[')
+				st.push(ch[i]);
 
-				if (ch[i] == '}' || ch[i] == ')' || ch[i] == ']') {
+			if (ch[i] == '}' || ch[i] == ')' || ch[i] == ']') {
 
-					if (st.isEmpty()) {
-						return false;
-					}
-
-					else if (!isMatchingPair(st.pop(), ch[i])) {
-						return false;
-					}
+				if (st.isEmpty()) {
+					return false;
 				}
 
+				else if (!isMatchingPair((char) st.pop(), ch[i])) {
+					return false;
+				}
 			}
 
-			if (st.isEmpty())
-				return true;
-			else {
-				return false;
-			}
 		}
-	    static boolean isMatchingPair(char character1, char character2) {
-			if (character1 == '(' && character2 == ')')
-				return true;
-			else if (character1 == '{' && character2 == '}')
-				return true;
-			else if (character1 == '[' && character2 == ']')
-				return true;
-			else
-				return false;
+
+		if (st.isEmpty())
+			return true;
+		else {
+			return false;
 		}
+	}
+
 
 	    
 	    
@@ -155,7 +157,7 @@ public class DataStructuresProgram {
 		        } else {
 		            System.out.println("Numbers which are prime but not anagram are:"+aList.size());
 		            System.out.println();
-		            for (int j = 0; j < aList.size(); j++) {
+		            for (int j = 1; j < aList.size(); j++) {
 		                System.out.print(aList.get(j) + " ");
 		            }
 		        }

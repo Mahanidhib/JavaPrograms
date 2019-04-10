@@ -1,5 +1,5 @@
 package com.bridgelabz.util;
-public class StackLinkedList<T> {
+public class StackLinkedList <T> {
 
         /*
          * top is of the type Node and is
@@ -68,4 +68,3 @@ public class StackLinkedList<T> {
             return tnode.getValue();
         }
     }
-

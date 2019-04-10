@@ -19,7 +19,7 @@ public class PrimeNumbers2D {
 	}
 	for(int i =0; i<a1.size(); i++){
 		List<Integer>  primeNumbers = a1.get(i);
-		for(int j=0; j<primeNumbers.size(); j++){
+		for(int j=1; j<primeNumbers.size(); j++){
 			System.out.print(primeNumbers.get(j)+" ");
 		}
 		System.out.println();

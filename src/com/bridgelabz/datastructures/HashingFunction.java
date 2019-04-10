@@ -6,18 +6,17 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.bridgelabz.util.CustomLinkedList;
-
+import com.bridgelabz.util.SinglyLinkedList;
 
 public class HashingFunction {
 
 	public static void main(String[] args) throws IOException {
-		CustomLinkedList<Integer> ds = new CustomLinkedList<>();
-		CustomLinkedList<Integer> ds1 = null;
+		SinglyLinkedList<Integer> ds = new SinglyLinkedList<>();
+		SinglyLinkedList<Integer> ds1 = null;
 
-		Map<Integer, CustomLinkedList<Integer>> map = new HashMap<Integer, CustomLinkedList<Integer>>();
+		Map<Integer, SinglyLinkedList<Integer>> map = new HashMap<Integer, SinglyLinkedList<Integer>>();
 		for (int i = 0; i <= 10; i++) {
-			ds1 = new CustomLinkedList<>();
+			ds1 = new SinglyLinkedList<>();
 			map.put(i, ds1);
 		}
 		FileReader fr = new FileReader("C:\\Users\\Mahanidhi\\Desktop\\New Text Document (4).txt");
@@ -67,12 +66,11 @@ public class HashingFunction {
 		}
 
 		for (int i = 0; i < map.size(); i++) {
-			CustomLinkedList<Integer> list = map.get(i);
+			SinglyLinkedList<Integer> list = map.get(i);
 			System.out.print(i + "--> ");
 			list.printList();
 			System.out.println();
 		}
-
 
 		br.close();
 	}

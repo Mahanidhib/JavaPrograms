@@ -2,7 +2,7 @@ package com.bridgelabz.datastructures;
 
 
 import com.bridgelabz.util.Functionalprogram;
-import com.bridgelabz.util.NodeDeque;
+import com.bridgelabz.util.Node;
 
 public class PalindromeChecker {
 
@@ -13,7 +13,7 @@ public class PalindromeChecker {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		NodeDeque<Character> node = new NodeDeque<Character>();
+		Node<Character> node = new Node<Character>();
 
 		System.out.println("Enter a String: ");
 		String input = Functionalprogram.getInputString();

@@ -11,28 +11,34 @@ public class SinglyLinkedList<T> {
 	public boolean isEmpty() {
 		return head == null;
 	}
-
-	public String addElement(String key) {
+	public void add(T data) {
 		Node<T> nd = new Node<T>();
-		nd.setValue((T) key);
-		size++;
 
-		/**
-		 * check if the list is empty
-		 */
+		nd.setValue(data);
+
+		System.out.println("Adding: " + data);
 		if (isEmpty()) {
-			// since there is only one element, both head and
-			// tail points to the same object.
 			head = nd;
 			tail = nd;
 		} else {
-			// set current tail next link to new node
 			tail.setNextRef(nd);
-			// set tail as newly created node
 			tail = nd;
 		}
-		return null;
 	}
+
+	public boolean search(T data) {
+		Node<T> temp = head;
+
+		while (temp.getNextRef() != null) {
+
+			if (data.equals(temp.getValue())) {
+				return true;
+			}
+			temp = temp.getNextRef();
+		}
+		return false;
+	}
+
 
 	public void traverse() {
 
@@ -86,16 +92,68 @@ public class SinglyLinkedList<T> {
 		}
 		for (int i = 0; i < str.length; i++) {
 			if (str[i] != null)
-				newList.addElement(str[i]);
+				newList.add(str[i]);
 		}
 		if (status) {
 			System.out.println("Element is present in the list ");
 		} else {
 			System.out.println("Element is not present in the list ");
-			newList.addElement(key);
+			newList.add(key);
 		}
 
 		return newList;
 	}
+	
+	public String[] convArray(String[] array) {
+		Node<T> tnode = head;
+		int i = 0;
+		while (tnode != null) {
+			array[i] = String.valueOf(tnode.getValue());
+			tnode = tnode.getNextRef();
+			i++;
+		}
+		return array;
+	}
+
+	public int[] convertIntArray(String[] arr) {
+		int[] arrInt = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			arrInt[i] = Integer.valueOf(arr[i]);
+		}
+		return arrInt;
+	}
+
+	public int[] sort(int[] array) {
+		int temp;
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array.length - 1; j++) {
+				if (array[j] > array[j + 1]) {
+					temp = array[j];
+					array[j] = array[j + 1];
+					array[j + 1] = temp;
+				}
+			}
+		}
+		return array;
+	}
+
+	public void printList() {
+		Node<T> tnode = head;
+		while (tnode != null) {
+			System.out.print(tnode.getValue() + " ");
+			tnode = tnode.getNextRef();
+		}
+	}
+	public int size() {
+		Node<T> tnode = head;
+		int len = 0;
+		while (tnode != null) {
+			len++;
+			tnode = tnode.getNextRef();
+		}
+		return len;
+	}
+	
+	
 	}
 
