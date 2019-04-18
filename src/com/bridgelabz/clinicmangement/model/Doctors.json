@@ -1,0 +1,34 @@
+{
+	"Doctor": [
+		{
+			"Name": "Dr.Mahanidhi B",
+			"id": 101,
+			"Specialisation": "Cardiologist",
+			"Availability": "10AM-1PM"
+		},
+		{
+			"Name": "Dr.Sai.s",
+			"id": 102,
+			"Specialisation": "psychologist",
+			"Availability": "12PM-4PM"
+		},
+		{
+			"Name": "Dr.Ranjitha Shivamatt",
+			"id": 103,
+			"Specialisation": "Urologist",
+			"Availability": "1PM-3PM"
+		},
+		{
+			"Name": "Dr.Kavya B.P",
+			"id": 104,
+			"Specialisation": "Neurologist",
+			"Availability": "1PM-3PM"
+		},
+		{
+			"Name": "Dr.Kavya",
+			"id": 105,
+			"Specialisation": "orthopedist",
+			"Availability": "10AM-5PM"
+		}
+	]
+}

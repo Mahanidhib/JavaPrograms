@@ -13,12 +13,11 @@ public class Functionalprogram {
 
 	public static int getInputInteger() {
 		return scan.nextInt();
-
 	}
 
 	public static String getInputString() {
-		return scan.nextLine();
 
+		return scan.next();
 	}
 
 	public static double getInputDoubleModel() {
@@ -27,6 +26,10 @@ public class Functionalprogram {
 
 	public static float floatModel() {
 		return scan.nextFloat();
+	}
+
+	public static long getInputLong() {
+		return scan.nextLong();
 	}
 
 	/**
@@ -120,15 +123,13 @@ public class Functionalprogram {
 	 * @return
 	 */
 	public static boolean leap(int year) {
-		if(year>999)
-		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-			return true;
-		} 
-			
-		
+		if (year > 999)
+			if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+				return true;
+			}
+
 		return false;
 	}
-	
 
 	/**
 	 * 6. Power of 2
@@ -267,7 +268,7 @@ public class Functionalprogram {
 			System.out.println("Roots are distinct" + " " + "root=" + root1 + "root2=" + root2);
 		} else if (quad == 0) {
 			double root3 = (-b) / (2 * a);
-			//double root4 = root3;
+			// double root4 = root3;
 			System.out.println("Roots are eual" + " " + "root=" + root3);
 		} else if (quad < 0) {
 			double real = (-b) / (2 * a);

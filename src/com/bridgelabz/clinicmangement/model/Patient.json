@@ -1,0 +1,28 @@
+{
+	"Patient": [
+		{
+			"Name": "Ashwini",
+			"id": 201,
+			"Mobile.No": 9865471230,
+			"Age": 16
+		},
+		{
+			"Name": "Nandhan",
+			"id": 202,
+			"Mobile.No": 8596741230,
+			"Age": 24
+		},
+		{
+			"Name": "Divya",
+			"id": 203,
+			"Mobile.No": 7894561230,
+			"Age": 203
+		},
+		{
+			"Name": "Shrishti",
+			"id": 204,
+			"Mobile.No": 9854786320,
+			"Age": 23
+		}
+	]
+}
