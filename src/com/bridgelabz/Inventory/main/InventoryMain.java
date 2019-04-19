@@ -2,8 +2,8 @@ package com.bridgelabz.Inventory.main;
 
 import java.io.IOException;
 
-import com.bridgelabz.Inventory.DataImplemention.InventoryManagement;
-import com.bridgelabz.inventoryManagementData.InventoryInterface;
+import com.bridgelabz.InventoryImpl.InventoryManagement;
+import com.bridgelabz.InventoryService.InventoryInterface;
 import com.bridgelabz.util.Functionalprogram;
 
 public class InventoryMain {

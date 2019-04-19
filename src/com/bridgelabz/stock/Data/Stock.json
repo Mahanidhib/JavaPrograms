@@ -1,1 +1,48 @@
-[{"Stockname":"Pen","NumberofShares":4,"SharePrice":10.0},{"Stockname":"Book","NumberofShares":5,"SharePrice":25.0},{"Stockname":"pencil","NumberofShares":5,"SharePrice":6.0}]
+[
+	{
+		"name": "pen",
+		"noShare": 5,
+		"price": 200.0
+	},
+	{
+		"name": "book",
+		"noShare": 10,
+		"price": 2.0
+	},
+	{
+		"Stockname": "pencile",
+		"noShare": 25,
+		"SharePrice": 520.0
+	},
+	{
+		"Stockname": "BOOK",
+		"NumberofShares": 58,
+		"SharePrice": 25.0
+	},
+	{
+		"naStocknameme": "asa",
+		"NumberofShares": 58,
+		"SharePrice": 5.0
+	},
+	{
+		"nStocknameame": "ppp",
+		"NumberofShares": 52,
+		"SharePrice": 5.0
+	},
+	{
+		"nStocknameame": "kkk",
+		"NumberofShares": 59,
+		"SharePrice": 5.0
+	},
+	{
+		"naStocknameme": "ibm",
+		"NumberofShares": 20,
+		"SharePrice": 500.0
+	},
+	{
+		"nStocknameame": "aaaa",
+		"NumberofShares": 56,
+		"SharePrice": 2000.0
+	}
+]
+

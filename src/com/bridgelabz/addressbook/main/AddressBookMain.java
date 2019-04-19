@@ -1,7 +1,7 @@
 package com.bridgelabz.addressbook.main;
 
-import com.bridgelabz.addressbook.DataImplementation.AdressBookDataImplementation;
-import com.bridgelabz.addressbook.Model.AddressBookInterface;
+import com.bridgelabz.addressbookModel.AddressBookInterface;
+import com.bridgelabz.addressbookServiceImpl.AdressBookDataImplementation;
 import com.bridgelabz.util.Functionalprogram;
 
 public class AddressBookMain {

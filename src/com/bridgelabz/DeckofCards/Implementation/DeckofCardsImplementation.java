@@ -27,6 +27,7 @@ public class DeckofCardsImplementation implements DeckofCardsInterface {
 			double rand = (Math.random());
 
 			int r = i + (int) (rand * (n - i));
+			
 			String temp = deck[r];
 			deck[r] = deck[i];
 			deck[i] = temp;
@@ -48,10 +49,12 @@ public class DeckofCardsImplementation implements DeckofCardsInterface {
 			System.out.print("----- Person " + (i + 1) + " -----\t");
 		}
 		System.out.println();
+		int k=0;
 
 		for (int i = 0; i < 9; i++) {
 			for (int j = 0; j < 4; j++) {
-				System.out.print(deck[i + j * 4] + " (Card " + (i + j * 4) + ")" + "\t");
+				System.out.print(deck[k]+"\t");
+				k++;
 			}
 			System.out.println();
 		}
