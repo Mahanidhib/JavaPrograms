@@ -7,7 +7,7 @@ public interface InventoryInterface {
 
 	public void addInventory(String name, double weight, double price) throws IOException;
 
-	public void writeFile() throws IOException;
+	//public void writeFile() throws IOException;
 
 	public void removeInventory(String name);
 

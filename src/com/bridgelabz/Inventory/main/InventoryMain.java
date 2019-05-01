@@ -21,7 +21,6 @@ public class InventoryMain {
 			double price = Functionalprogram.getInputDoubleModel();
 			inventaryImp.addInventory(name, weight, price);
 			inventaryImp.calculateInventory();
-			inventaryImp.writeFile();
 			inventaryImp.removeInventory(name);
 		}
 

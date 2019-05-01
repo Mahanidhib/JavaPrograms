@@ -1,17 +1,1 @@
-{  
-   "ShareHolders":[  
-      {  
-         "stockCompany":"IndusTMT",
-         "noOfShares":35.0,
-         "sharePrice":190.0,
-         "currentDateTime":"2018-10- 06T12:54:44.797"
-         
-      },
-      {  
-         "stockCompany":"Tata",
-         "noOfShares":21.0,
-         "sharePrice":120.0,
-         "currentDateTime":"2018-10- 06T12:54:44.797"
-      }
-   ]
-}
+{"ShareHolders":[{"stockCompany":"IndusTMT","noOfShares":35.0,"sharePrice":190.0,"currentDateTime":"2018-10- 06T12:54:44.797"},{"stockCompany":"Tata","noOfShares":21.0,"sharePrice":120.0,"currentDateTime":"2018-10- 06T12:54:44.797"},{"stockCompany":"IndusTMT","noOfShares":10.0,"sharePrice":25.0,"currentDateTime":"2019-04-19T19:18:45.875575400"}]}

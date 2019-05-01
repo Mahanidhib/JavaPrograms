@@ -13,6 +13,7 @@ import org.json.simple.parser.JSONParser;
 
 import com.bridgelabz.Inventory.InventoryManagementData;
 import com.bridgelabz.InventoryService.InventoryInterface;
+import com.bridgelabz.oops.common.exception.CustomException;
 import com.bridgelabz.util.Functionalprogram;
 import com.google.gson.Gson;
 
@@ -26,8 +27,8 @@ public class InventoryManagement implements InventoryInterface {
 	public void fileRead() {
 		JSONParser parser = new JSONParser();
 		{
-
 			try {
+
 				try {
 					jsonArray = (JSONArray) parser.parse(new FileReader(
 							"E:\\eclipseprograms\\functional_programs\\src\\com\\bridgelabz\\inventoryManagement\\model\\Inventory.json"));
@@ -36,14 +37,9 @@ public class InventoryManagement implements InventoryInterface {
 					e.printStackTrace();
 				}
 				System.out.println("====>>" + jsonArray);
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (Exception e) {
+				throw new CustomException("error reading inventories", e);
 			}
-
 			for (Object obj : jsonArray) {
 				InventoryManagementData inventory = new InventoryManagementData();
 
@@ -67,10 +63,10 @@ public class InventoryManagement implements InventoryInterface {
 	public void calculateInventory() {
 		inventories.forEach(inventory -> System.out.println(
 				"Total price of " + inventory.getName() + "is" + (inventory.getPrice() * inventory.getWeight())));
-
+writeFile();
 	}
 
-	public void writeFile() {
+	private void writeFile() {
 		Gson gson = new Gson();
 		String json = gson.toJson(inventories);
 		System.out.println(json);
